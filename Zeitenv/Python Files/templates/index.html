@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <title>Zeiterfassungstool - Startseite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:i0f84bba906045b4af568ee102a52dcb msdt:dt="string">0.1 Initial category|0239cc7a-0c96-48a8-9e0e-a383e362571c</mso:i0f84bba906045b4af568ee102a52dcb>
+<mso:TaxCatchAll msdt:dt="string">1;#0.1 Initial category|0239cc7a-0c96-48a8-9e0e-a383e362571c</mso:TaxCatchAll>
+<mso:RevIMComments msdt:dt="string"></mso:RevIMComments>
+<mso:RevIMExtends msdt:dt="string">{&quot;Classified&quot;:&quot;2023-06-28T11:26:20.532Z&quot;,&quot;KSUClass&quot;:&quot;0239cc7a-0c96-48a8-9e0e-a383e362571c&quot;}</mso:RevIMExtends>
+<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:oc059baae95e40e7af656d41b06745f2 msdt:dt="string"></mso:oc059baae95e40e7af656d41b06745f2>
+<mso:LegalHoldTag msdt:dt="string"></mso:LegalHoldTag>
+<mso:RevIMDeletionDate msdt:dt="string">2025-06-28T13:24:40Z</mso:RevIMDeletionDate>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+<mso:RevIMBCS msdt:dt="string">1;#0.1 Initial category|0239cc7a-0c96-48a8-9e0e-a383e362571c</mso:RevIMBCS>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Zeiterfassungstool</div>
+            <ul>
+                <li><a href="{{ url_for('login') }}">Anmelden</a></li>
+                <li><a href="{{ url_for('register') }}">Registrieren</a></li>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Willkommen beim Zeiterfassungstool</h1>
+            <p>Mit unserem Tool kannst du ganz einfach deine Arbeitszeit erfassen und verwalten.</p>
+            <a href="{{ url_for('register') }}" class="btn">Jetzt registrieren</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-clock"></i>
+            <h2>Einfache Zeitverfolgung</h2>
+            <p>Verfolge deine Arbeitszeit mit nur einem Klick und behalte den Überblick über deine Projekte.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-chart-bar"></i>
+            <h2>Detaillierte Berichte</h2>
+            <p>Generiere detaillierte Berichte über deine Arbeitszeiten, Projektfortschritte und vieles mehr.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-users"></i>
+            <h2>Teammanagement</h2>
+            <p>Verwalte dein Team, weise Aufgaben zu und behalte den Fortschritt im Blick.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Zeiterfassungstool. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
