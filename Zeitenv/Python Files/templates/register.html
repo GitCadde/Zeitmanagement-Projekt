@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <title>Registrierung</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:i0f84bba906045b4af568ee102a52dcb msdt:dt="string">0.1 Initial category|0239cc7a-0c96-48a8-9e0e-a383e362571c</mso:i0f84bba906045b4af568ee102a52dcb>
+<mso:TaxCatchAll msdt:dt="string">1;#0.1 Initial category|0239cc7a-0c96-48a8-9e0e-a383e362571c</mso:TaxCatchAll>
+<mso:RevIMComments msdt:dt="string"></mso:RevIMComments>
+<mso:RevIMExtends msdt:dt="string">{&quot;Classified&quot;:&quot;2023-06-28T11:26:20.541Z&quot;,&quot;KSUClass&quot;:&quot;0239cc7a-0c96-48a8-9e0e-a383e362571c&quot;}</mso:RevIMExtends>
+<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:oc059baae95e40e7af656d41b06745f2 msdt:dt="string"></mso:oc059baae95e40e7af656d41b06745f2>
+<mso:LegalHoldTag msdt:dt="string"></mso:LegalHoldTag>
+<mso:RevIMDeletionDate msdt:dt="string">2025-06-28T13:24:40Z</mso:RevIMDeletionDate>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+<mso:RevIMBCS msdt:dt="string">1;#0.1 Initial category|0239cc7a-0c96-48a8-9e0e-a383e362571c</mso:RevIMBCS>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="container_allignment">
+        <div class="container">
+            <div class="register-form">
+                <h1>Registrierung</h1>
+                {% if message %}
+                    <div class="success-message">{{ message }}</div>
+                {% endif %}
+                <form action="{{ url_for('register') }}" method="POST">
+                    <input type="text" name="first_name" placeholder="Vorname" required class="text-input">
+                    <input type="text" name="last_name" placeholder="Nachname" required class="text-input">
+                    <input type="email" name="email" placeholder="Email-Adresse" required class="text-input">
+                    <input type="password" name="password" placeholder="Passwort" required class="text-input">
+                    <button type="submit">Registrieren</button>
+                </form>
+                <div class="startseite-link">
+                    <a href="{{ url_for('index') }}">Zurück zur Startseite</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
